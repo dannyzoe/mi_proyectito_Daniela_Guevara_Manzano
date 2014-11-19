@@ -3,7 +3,7 @@ package com.jc.elementos.controller;
 import java.util.ArrayList;
 
 public class GenerarUsuarios {
-    public static ArrayList<Usuario>obtenerUsuarios(){
+    /*public static ArrayList<Usuario>obtenerUsuarios(){
         ArrayList<Usuario> usuario=new ArrayList<Usuario>();
         //primero creamos tres direcciones
         Direccion d1=new Direccion("calle de la muerte",55090,"Azteca","Mexico");
@@ -20,4 +20,4 @@ public class GenerarUsuarios {
         
             return usuario;
     }
-}
+*/}

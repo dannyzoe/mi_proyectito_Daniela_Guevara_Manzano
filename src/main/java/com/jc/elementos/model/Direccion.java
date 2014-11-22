@@ -17,11 +17,8 @@ import javax.persistence.ManyToOne;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.Table;
+import org.codehaus.jackson.annotate.JsonIgnore;
 
-/**
- *
- * @author T107
- */
 @Entity
 @Table(name = "direccion")
 //@NamedQueries({
@@ -44,6 +41,7 @@ public class Direccion implements Serializable {
     private String estado;
     @JoinColumn(name = "ID_USUARIO", referencedColumnName = "ID_USUARIO")
     @ManyToOne
+    @JsonIgnore
     private Usuario idUsuario;
 
     public Direccion() {

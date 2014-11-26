@@ -1,10 +1,16 @@
 package com.jc.elementos.controller;
 
+import com.jc.elementos.model.DAOUsuarioImpl;
+import com.jc.elementos.model.Direccion;
+import com.jc.elementos.model.Usuario;
 import java.util.ArrayList;
 
 public class GenerarUsuarios {
-    /*public static ArrayList<Usuario>obtenerUsuarios(){
-        ArrayList<Usuario> usuario=new ArrayList<Usuario>();
+    public static String obtenerUsuarios()throws Exception{
+        DAOUsuarioImpl du=new DAOUsuarioImpl();
+       
+        //ArrayList<Usuario> usuario=new ArrayList<Usuario>();
+        /*
         //primero creamos tres direcciones
         Direccion d1=new Direccion("calle de la muerte",55090,"Azteca","Mexico");
         Direccion d2=new Direccion("calle de la amargura",55130,"San Geronimo","Chihuahua");
@@ -18,6 +24,6 @@ public class GenerarUsuarios {
         usuario.add(u2);
         usuario.add(u3);
         
-            return usuario;
+            */return du.obtenerTodos();
     }
-*/}
+}

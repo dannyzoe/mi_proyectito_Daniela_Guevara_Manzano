@@ -23,10 +23,10 @@ public class ControladorHola {
     }
     //Crear un método get para los usuarios que me devuelva TODOSSS
     
-    @RequestMapping(value="/usuario", method=RequestMethod.GET, headers={"Accept=Application/json"})
-    public @ResponseBody String obtenerTodos()throws IOException{
+   @RequestMapping(value="/usuario", method=RequestMethod.GET, headers={"Accept=Application/json"})
+    public @ResponseBody String obtenerTodos()throws Exception{
         //Vamos a usar la implementación json para java fasterxml o codehouse
-        ObjectMapper mapper=new ObjectMapper();
-        return mapper.writeValueAsString(GenerarUsuarios.obtenerUsuarios());
+   
+        return GenerarUsuarios.obtenerUsuarios();
     }
 }

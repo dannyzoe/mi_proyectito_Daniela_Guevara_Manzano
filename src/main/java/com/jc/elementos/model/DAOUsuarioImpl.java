@@ -1,6 +1,8 @@
 package com.jc.elementos.model;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Map;
 import org.codehaus.jackson.map.ObjectMapper;
 import org.hibernate.Criteria;
 import org.hibernate.Session;
@@ -18,13 +20,19 @@ public class DAOUsuarioImpl {
         Session session= factory.openSession();
         Transaction tranza= session.beginTransaction();
  Criteria cri=session.createCriteria(Usuario.class);
+ 
+ 
+ 
  ArrayList<Usuario> usuarios= (ArrayList<Usuario>)cri.list();
+ Map<String, ArrayList<Usuario>> singletonMap = Collections.singletonMap("usuarios", usuarios);
+ 
+ 
  
  ObjectMapper mapper= new ObjectMapper();
  
  tranza.commit();
  session.close();
  
- return mapper.writeValueAsString(usuarios);
+ return mapper.writeValueAsString(singletonMap);
     }
 }

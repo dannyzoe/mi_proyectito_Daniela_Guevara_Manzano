@@ -22,7 +22,7 @@ public class WebAp extends AbstractAnnotationConfigDispatcherServletInitializer{
     @Override
     protected Class<?>[] getServletConfigClasses() {
         System.out.println(">>>>>>>>>>>>>CARGANDO CONFIGURACION DE SERVLETS");
-       return new Class<?>[]{WebApConfig.class}; 
+       return new Class<?>[]{WebApConfig.class,WebAppHibernate.class}; 
     }
 
     @Override

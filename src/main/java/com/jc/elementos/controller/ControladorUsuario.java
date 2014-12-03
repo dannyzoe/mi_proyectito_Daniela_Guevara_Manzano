@@ -34,4 +34,7 @@ public class ControladorUsuario {
     
         return du.obtenerUsuarioPorId(id);
     }
+    
+    
+    
 }

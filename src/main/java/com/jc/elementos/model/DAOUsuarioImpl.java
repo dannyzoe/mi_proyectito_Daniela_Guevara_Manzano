@@ -71,11 +71,12 @@ public class DAOUsuarioImpl {
   ArrayList<Usuario> usuario=(ArrayList<Usuario>) cri.list();
   
   ObjectMapper mapper=new ObjectMapper();
-  Map<String, ArrayList<Usuario>> singletomMap=Collections.singletonMap("usuario", usuarios)
+  Map<String, ArrayList<Usuario>> singletomMap=Collections.singletonMap("usuario", usuario);
  
  tranza.commit();
  session.close();
  
- return mapper.writeValueAsString(u);
+ return mapper.writeValueAsString(usuario);
     
+}
 }

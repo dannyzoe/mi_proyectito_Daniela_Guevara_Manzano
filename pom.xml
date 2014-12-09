@@ -7,7 +7,7 @@
   <packaging>war</packaging>
   <version>1</version>
 
-  <name>elementos-yo-alumno</name>
+  <name>mi-proyectito-dgm</name>
   <url>http://maven.apache.org</url>
 
   <dependencies>

@@ -37,7 +37,7 @@ public class DAOUsuarioImpl {
  tranza.commit();
  session.close();
  
- return mapper.writeValueAsString(singletonMap);
+ return mapper.writeValueAsString(usuarios);
     }
    public String obtenerUsuarioPorId(Integer Id) throws Exception{
         SessionFactory factory=NewHibernateUtil.getSessionFactory();

@@ -45,16 +45,9 @@ public class Usuario implements Serializable {
     // @Max(value=?)  @Min(value=?)//if you know range of your decimal fields consider using these annotations to enforce field validation
     @Column(name = "SUELDO")
     private Float sueldo;
-    @OneToOne(mappedBy = "idUsuario")
-    private Direccion direccion;
 
-    public Direccion getDireccion() {
-        return direccion;
-    }
 
-    public void setDireccion(Direccion direccion) {
-        this.direccion = direccion;
-    }
+  
 
     public Usuario(String nombre, Integer edad, Float sueldo) {
         this.nombre = nombre;
